@@ -1,0 +1,37 @@
+# Virtual machines and virtual disks
+*.vdi
+*.vmdk
+*.vhd
+*.vhdx
+*.qcow2
+*.ova
+*.ovf
+*.sav
+*.vbox
+*.vbox-prev
+
+# Snapshots, exports and backups
+snapshots/
+exports/
+backups/
+*.ova
+*.7z
+*.zip
+
+# Sensitive lab material
+.env
+.env.*
+*.key
+*.pfx
+*.p12
+*.pem
+secrets/
+credentials/
+private/
+
+# Local-only notes and temporary files
+local-notes/
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
