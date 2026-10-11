@@ -40,16 +40,6 @@ Subnet mask: `255.255.255.0`
 
 The planned domain name is `lab.example.test`.
 
-## Why the Network Is `10.10.10.0/24` but the Host Uses `10.10.10.1`
-
-`10.10.10.0/24` identifies the subnet; it is not an address to assign to an ordinary host. With the `/24` prefix (subnet mask `255.255.255.0`):
-
-- `10.10.10.0` is the network address.
-- `10.10.10.1` through `10.10.10.254` are usable host addresses.
-- `10.10.10.255` is the broadcast address.
-
-We assign `10.10.10.1` to the host-only adapter on Kali because it is a valid host address and is easy to remember. It is **not a gateway** in this design. The lab guests will have their default gateway field left blank, so they do not have a configured default route to the Internet or the physical LAN. The `.1` address is a convention we chose, not a requirement; another unused address in the usable range would also work.
-
 ## Isolation and Network Rules
 
 - Use a dedicated VirtualBox **Host-only Adapter** network for each lab guest's only network adapter.
