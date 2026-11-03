@@ -1,0 +1,5 @@
+a.alice ,p=Alice123
+b.bob , p=Bob12345
+c.charlie , p=Charlie123
+meev.admin , p=Admin123
+svc-filesmgr , p=Secure/123

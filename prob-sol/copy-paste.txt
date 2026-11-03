@@ -1,0 +1,4 @@
+i cant copy commandes from my host to the qemu vm , 
+solve :
+	add hardware to the vm , chanel , spice agent
+	then in the windows vm we install spice agent from the official website (spice space)

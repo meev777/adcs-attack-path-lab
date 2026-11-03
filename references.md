@@ -6,6 +6,10 @@ This project uses external material for learning and comparison. References are 
 
 * Bericontraster, "Building a Vulnerable Active Directory Lab for Penetration Testing: A Practical Walkthrough." Medium.
   https://medium.com/@bericontraster/building-a-vulnerable-active-directory-lab-for-penetration-testing-a-practical-walkthrough-b98a8a36aec3
+* Accessible mirror of the same walkthrough:
+  https://bericontraster.com/posts/vulnerable-active-directory-lab/
+
+The original lab uses `NEBULA` names and a VirtualBox NAT network. This rebuild maps the path to `esi-sba-meev.local`, QEMU/KVM, an isolated libvirt network, and the identities documented in `planing/01-attack-path-build.md`. The Medium URL may return HTTP 403; the mirror is the working reference.
 
 The original Active Directory lab was used as an inspiration for the initial environment and attack-path investigation. This rebuild aims to independently verify the relevant prerequisites, document changes, and add evidence-based defensive analysis.
 

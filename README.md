@@ -14,18 +14,18 @@ An isolated Active Directory security laboratory for studying identity weaknesse
 
 The initial environment consists of:
 
-* **DC01:** Windows Server domain controller and DNS server.
-* **CA01:** Windows Server running an Enterprise Certification Authority.
-* **WS01:** Windows workstation joined to the lab domain.
-* **Kali Linux:** Testing and analysis environment.
+* **MEEV-DC01:** Windows Server domain controller and DNS server for `esi-sba-meev.local`.
+* **CA01:** Windows Server running an Enterprise Certification Authority (`MEEV-ROOT-CA`).
+* **MS01:** Windows workstation joined to the lab domain.
+* **Kali Linux:** Testing and analysis environment on the QEMU/KVM host.
 
-See [`diagrams/architecture.md`](diagrams/architecture.md) for the planned architecture.
+The VMs use the isolated libvirt network `ADCS-LAB` on `10.10.10.0/24` with the host bridge `virbr10`. See [`diagrams/architecture.md`](diagrams/architecture.md) for the architecture and [`planing/attack-path.png`](planing/attack-path.png) for the target path. The manual build is in [`planing/00-build-runbook.md`](planing/00-build-runbook.md); the controlled vulnerability build is in [`planing/01-attack-path-build.md`](planing/01-attack-path-build.md).
 
 ## Project Status
 
-**Phase 0 — Planning and repository setup**
+**Phase 1 — Domain and network infrastructure (in progress)**
 
-The architecture, isolation requirements, evidence strategy, and build plan are being established. No attack-path result is considered verified until it has been reproduced and documented.
+The QEMU/KVM lab network, domain, and DC are built. The next step is creating the attack-path identities and groups, followed by the CA and workstation. No attack-path result is considered verified until it has been reproduced and documented.
 
 ## Methodology
 
@@ -40,7 +40,7 @@ Each milestone follows this process:
 
 ## Safety and Scope
 
-This project is intended for an isolated, authorized laboratory. Intentionally vulnerable configurations must not be exposed to production networks or public services.
+This project is intended for an isolated, authorized laboratory. Intentionally vulnerable configurations must not be exposed to production networks or public services. The `esi-sba-meev.local` domain exists only on the isolated libvirt network; it must never be connected to a real network.
 
 Only fictional lab identities and credentials will be used. Sensitive information, private keys, passwords, VM disks, and unreviewed raw evidence must not be published.
 
@@ -54,8 +54,8 @@ Results depend on the Windows versions, domain configuration, certificate templa
 
 ## Roadmap
 
-* [ ] Phase 0: Project specification and repository setup
-* [ ] Phase 1: Virtual network and domain infrastructure
+* [x] Phase 0: Project specification and repository setup
+* [ ] Phase 1: QEMU/KVM network and domain infrastructure (in progress)
 * [ ] Phase 2: Enterprise CA and certificate-template configuration
 * [ ] Phase 3: Controlled attack-path validation
 * [ ] Phase 4: Detection, remediation, and retesting

@@ -23,8 +23,8 @@ How can weaknesses in Active Directory authentication, account configuration, an
 
 ### In scope
 
-* A private VirtualBox laboratory.
-* Fictional users, groups, hosts, and credentials.
+* A private QEMU/KVM laboratory on an isolated libvirt network.
+* The fictional `esi-sba-meev.local` domain and its users, groups, hosts, and credentials.
 * Active Directory configuration and certificate-template security.
 * Authorized, controlled attack simulation.
 * Relevant event logs and defensive controls.
@@ -54,5 +54,5 @@ External tutorials may be used as learning references. Their ideas and any direc
 
 ## 7. Current Status
 
-Planning only. The environment and attack path have not yet been validated as part of this rebuild.
+Phase 1 is in progress. The QEMU/KVM network and `esi-sba-meev.local` domain are built. The attack-path identities, CA, workstation, and controlled validation remain to be completed and documented.
 

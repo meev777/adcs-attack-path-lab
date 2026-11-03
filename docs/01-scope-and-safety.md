@@ -2,14 +2,14 @@
 
 ## Environment
 
-The lab uses VirtualBox with a dedicated Internal Network named `ADCS-LAB`.
+The lab uses QEMU/KVM with the libvirt network `ADCS-LAB`, backed by the host bridge `virbr10`.
 
-The intended subnet is `10.10.10.0/24`. Lab machines must not use bridged networking.
+The intended subnet is `10.10.10.0/24`. The network must be isolated with no `<forward>` element or `<forward mode='none'/>`; lab machines must not use NAT, bridged networking, macvtap, or a physical interface. The domain is `esi-sba-meev.local` and must never be connected to a real network.
 
 ## Network Restrictions
 
 * Do not bridge intentionally vulnerable machines onto a physical network.
-* Do not expose lab services through router rules or port forwarding.
+* Do not use libvirt NAT or expose lab services through router rules or port forwarding.
 * Do not add a second network adapter to a vulnerable VM without documenting and reviewing the isolation implications.
 * Disable shared clipboard, drag-and-drop, and shared folders for lab guests.
 * Do not use real enterprise credentials or identities.
@@ -34,7 +34,7 @@ Screenshots and logs should represent actual observations. Do not fabricate, alt
 
 ## Recovery
 
-Create a clean snapshot after each verified configuration milestone. Record the snapshot's purpose and the corresponding documentation commit.
+Create a clean snapshot after each verified configuration milestone. Keep the clean baseline (`ESI-01-BASELINE`) separate from the intentionally vulnerable state (`ESI-02-ATTACK-PATH`). Record the snapshot's purpose and the corresponding documentation commit.
 
 ## Stop Conditions
 
