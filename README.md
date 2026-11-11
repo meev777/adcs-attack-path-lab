@@ -51,13 +51,3 @@ The original project was inspired in part by external Active Directory lab mater
 ## Limitations
 
 Results depend on the Windows versions, domain configuration, certificate template settings, and security controls used during testing. Findings should not be generalized to every Active Directory environment.
-
-## Roadmap
-
-* [x] Phase 0: Project specification and repository setup
-* [ ] Phase 1: QEMU/KVM network and domain infrastructure (in progress)
-* [ ] Phase 2: Enterprise CA and certificate-template configuration
-* [ ] Phase 3: Controlled attack-path validation
-* [ ] Phase 4: Detection, remediation, and retesting
-* [ ] Phase 5: Documentation review and portfolio release
-
