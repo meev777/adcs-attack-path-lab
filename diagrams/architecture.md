@@ -73,21 +73,4 @@ The controlled path in `planing/attack-path.png` is:
 8. GenericAll over MEEV Admin.
 9. Hash dump and pass-the-hash to MEEV-DC01.
 
-The build steps are in `planing/01-attack-path-build.md`. The clean baseline is `ESI-01-BASELINE`; the intentionally vulnerable state is `ESI-02-ATTACK-PATH`.
-
-## Evidence to Capture
-
-- QEMU/KVM VM inventory showing MEEV-DC01, CA01, MS01, and the `ADCS-LAB` network.
-- libvirt network XML and `virbr10` showing `10.10.10.1/24`, no NAT/route forward (no `<forward>` or `<forward mode='none'/>`), and no DHCP.
-- Each VM's NIC settings showing the same isolated network and no additional adapters.
-- MEEV-DC01's verified hostname and IPv4 configuration.
-- Successful DNS/domain checks after AD DS and DNS are installed.
-- CA01 domain membership and verified Enterprise CA configuration.
-- Attack-path evidence from the controlled build sheet.
-
-Screenshots must be reviewed to remove credentials, personal information, and unrelated host details before being committed publicly.
-
-## Status and Revision History
-
-- **Phase 0:** Planned topology and IP address plan.
-- **Phase 1:** Updated for QEMU/KVM, libvirt `ADCS-LAB`, `esi-sba-meev.local`, `MEEV-DC01`, `MS01`, and the target attack path.
+The build steps are in `planing/01-attack-path-build.md`. The clean baseline is `ESI-01-BASELINE`; the intentionally vulnerable state is `ESI-02-ATTACK-PATH`
