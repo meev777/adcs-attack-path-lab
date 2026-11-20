@@ -21,22 +21,7 @@ The initial environment consists of:
 
 The VMs use the isolated libvirt network `ADCS-LAB` on `10.10.10.0/24` with the host bridge `virbr10`. See [`diagrams/architecture.md`](diagrams/architecture.md) for the architecture and [`planing/attack-path.png`](planing/attack-path.png) for the target path. The manual build is in [`planing/00-build-runbook.md`](planing/00-build-runbook.md); the controlled vulnerability build is in [`planing/01-attack-path-build.md`](planing/01-attack-path-build.md).
 
-## Project Status
 
-**Phase 1 — Domain and network infrastructure (in progress)**
-
-The QEMU/KVM lab network, domain, and DC are built. The next step is creating the attack-path identities and groups, followed by the CA and workstation. No attack-path result is considered verified until it has been reproduced and documented.
-
-## Methodology
-
-Each milestone follows this process:
-
-1. Define the objective and prerequisites.
-2. Implement the configuration.
-3. Verify the result independently.
-4. Capture sanitized evidence.
-5. Document observations, limitations, and lessons learned.
-6. Commit the reviewed changes.
 
 ## Safety and Scope
 
