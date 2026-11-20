@@ -51,8 +51,3 @@ The project is complete when:
 ## 6. Learning and Attribution
 
 External tutorials may be used as learning references. Their ideas and any directly reproduced configurations will be credited. New analysis, design changes, independent validation, and defensive tests will be distinguished from reproduced material.
-
-## 7. Current Status
-
-Phase 1 is in progress. The QEMU/KVM network and `esi-sba-meev.local` domain are built. The attack-path identities, CA, workstation, and controlled validation remain to be completed and documented.
-
